@@ -49,6 +49,22 @@ for (let i = 0; i < getImg.length; i++) {
 
 /* First you select all paragraphs with a class, then in the for loop you let it print out  */
 
+const rgba1 = Math.round((Math.random()*255.));
+const rgba2 = Math.round((Math.random()*255.));
+const rgba3 = Math.round((Math.random()*255.));
+console.log (rgba1);
+
+
+
+
+function generateRandomColor() {
+    return "rgb("+rgba1+","+rgba2+","+rgba3+")";
+}
+
+for (var i = 0; i < 10; i++) {
+    console.log(generateRandomColor());
+  }
+
 
 /* for (let i = 0; i < getParagraphs.length; i++) {
     console.log(getParagraphs[i].innerText);
@@ -59,10 +75,43 @@ for (let i = 0; i < getImg.length; i++) {
 var getPars = document.querySelectorAll("p");
 for (let i = 0; i < getPars.length; i++) {
     let arrayPars = getPars[i];
-    console.log (arrayPars);
-    if (arrayPars.className)
+console.log (arrayPars);
 console.log (arrayPars.className);
+let arrayParsNoClass = (arrayPars.className == false) {
+    document.arrayParsNoClass.setAttribute("backgroundColor", generateRandomColor());
 }
+}
+
+/* for (let i = 0; i < arrayPars.className.length; i++) {
+    let arrayPars.className =
+} */
+
+/* var getPars1 = document.querySelectorAll("p")[2].className;
+console.log (getPars1);
+
+for (let i = 0; i < getPars.length; i++) {
+    let arrayPars = getPars[i];
+} */
+
+
+
+
+/* for (let backgroundColor of getPars) {
+    generateRandomColor ("")
+    if class.name = false;
+} */
+
+/* for of loop -> select paragraphs
+
+if class.name = empty 
+-> random color */
+
+
+/* Let's first just set the background random again: */
+
+document.body.style.backgroundColor = generateRandomColor("");
+
+
 
 
 /* for ( let i = 0; i < getPars.length; i ++) {
