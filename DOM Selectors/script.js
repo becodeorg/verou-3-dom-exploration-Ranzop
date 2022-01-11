@@ -72,16 +72,29 @@ for (var i = 0; i < 10; i++) {
  */
 
 /* var getPars = document.getElementsByTagName("p"); */
-var getPars = document.querySelectorAll("p");
+/* var getPars = document.querySelectorAll("p");
 for (let i = 0; i < getPars.length; i++) {
     let arrayPars = getPars[i];
 console.log (arrayPars);
 console.log (arrayPars.className);
-let arrayParsNoClass = (arrayPars.className == false) {
-    document.arrayParsNoClass.setAttribute("backgroundColor", generateRandomColor());
 }
-}
+ */
 
+document.querySelectorAll("p").forEach((element) => {
+    if (element.classList.contains(element.className)) {
+      
+    } else {
+        const rgba1 = Math.round((Math.random()*255));
+        const rgba2 = Math.round((Math.random()*255));
+        const rgba3 = Math.round((Math.random()*255));
+  
+      element.style.color = "rgb(" + rgba1 + "," + rgba2 + "," + rgba3 + ")";
+    }
+  });
+
+
+
+  
 /* for (let i = 0; i < arrayPars.className.length; i++) {
     let arrayPars.className =
 } */
