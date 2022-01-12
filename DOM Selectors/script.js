@@ -31,6 +31,9 @@ for (let i = 0; i < getImg.length; i++) {
 
 /* AAAAND IT WORKS WOHOOO */
 
+
+
+
 /* selected all imgs
 Now, let's loop over and select all the ones that don't have an important class */
 
@@ -79,6 +82,8 @@ console.log (arrayPars);
 console.log (arrayPars.className);
 }
  */
+
+document.getElementsByTagName("p").classList;
 
 document.querySelectorAll("p").forEach((element) => {
     if (element.classList.contains(element.className)) {
