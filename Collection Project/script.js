@@ -1,5 +1,4 @@
-const collection = [
-    {
+const collection = [{
         albumName: 'Fantastic Planet',
         artistName: 'Lealani',
         releaseYear: '2019',
@@ -48,56 +47,76 @@ const collection = [
 
 /* Tried to create this with a for loop but didn't really work.  */
 for (i = 0; i < collection.length; i++) {
-const createDiv1 = document.createElement ("div");
-document.body.appendChild(createDiv1);
+    const createDiv1 = document.createElement("div");
+    document.body.appendChild(createDiv1);
 
-const createDivContainer1 = document.createElement("container");
-document.body.appendChild(createDivContainer1);
+    const createDivContainer1 = document.createElement("container");
+    document.body.appendChild(createDivContainer1);
 
-const getDiv1 = document.getElementsByClassName("div");
-
-const Div = document.createElement ("div.albumName");
-const Div1 = document.createElement ("div.artistName");
-const Div2 = document.createElement ("div.releaseYear");
-const Div3 = document.createElement ("div.genre");
-const Div4 = document.createElement ("div.albumArtwork");
-const Div5 = document.createElement ("div.albumLabel");
-const Div6 = document.createElement ("div.albumCountryOfOrigin");
+    const Div = document.createElement("div.albumName");
+    const Div1 = document.createElement("div.artistName");
+    const Div2 = document.createElement("div.releaseYear");
+    const Div3 = document.createElement("div.genre");
+    const Div4 = document.createElement("div.albumArtwork");
+    const Div5 = document.createElement("div.albumLabel");
+    const Div6 = document.createElement("div.albumCountryOfOrigin");
 
 
-createDiv1.append (Div, Div1, Div2, Div3, Div4, Div5, Div6);
-createDivContainer1.append (createDiv1);
-
+    createDiv1.append(Div, Div1, Div2, Div3, Div4, Div5, Div6);
+    createDivContainer1.append(createDiv1);
+}
+for (i = 0; i < 1; i ++) {
+getSecondGenre = document.write (collection[0].genre[1]);
 }
 
-/* const createDiv2 = document.createElement ("div");
-document.body.appendChild(createDiv2);
+// A similar method would be:
 
-const createDivContainer2 = document.createElement("container");
-document.body.appendChild(createDivContainer2);
+collection.forEach((album) => {
+    console.log(album.genre);
+})
 
-const createDiv3 = document.createElement ("div");
-document.body.appendChild(createDiv3);
-
-const createDivContainer3 = document.createElement("container");
-document.body.appendChild(createDivContainer3);
-
-const createDiv4 = document.createElement ("div");
-document.body.appendChild(createDiv4);
-
-const createDivContainer4 = document.createElement("container");
-document.body.appendChild(createDivContainer4);
-
-const createDiv5 = document.createElement ("div");
-document.body.appendChild(createDiv5);
-
-const createDivContainer5 = document.createElement("container");
-document.body.appendChild(createDivContainer5); */
-
-// TODO: create 5x more divs inside the container.
+// TODO: 1. function (grab collection) 2. for collection[i] 3.grab collection[1].albumName 4.insert as InnerHTML
 
 
+/*     collection.forEach((album) => {
+        document.body.appendChild(album.albumName)
+    }) */
 
+// trying to get my array items into the right spot.
+
+collection.forEach((album) => {
+const albumName1 = document.querySelector("albumName");
+console.log (albumName1);
+albumName1.albumName === album.albumName;
+console.log(albumName1.albumName);
+    })
+
+/* getLabel1.insertBefore(Div); */
+/* for (i = 0; i < collection.length; i ++) {
+console.log(collection[i].albumName);
+const albumName1 = collection[1].albumName;
+document.createAttribute()
+} */
+
+
+
+/* var h1 = document.getElementsByTagName("H1")[0];   // Get the first <h1> element in the document
+var att = document.createAttribute("class");       // Create a "class" attribute
+att.value = "democlass";                           // Set the value of the class attribute
+h1.setAttributeNode(att);                          // Add the class attribute to <h1> */
+// trying to get some response out of some elements
+
+/* var selectAlbumName = document.getElementsByClassName("div.albumName");
+for (i = 0; i < selectAlbumName.length; i++) {
+    selectAlbumName[i].style.backgroundColor = "red";
+    selectAlbumName[i].style.padding = "100px";
+} */
+
+/* let txt =" ";
+for (i in collection) {
+    txt += collection[i];
+}
+document.getElementsByClassName("albumName").innerHTML = txt; */
 /* After the creation of an element, we can either use the appendChild() method or insertBefore() method to insert the created element in the document. */
 
 
@@ -109,5 +128,5 @@ document.body.appendChild(createDivContainer5); */
 3. append div into container div and then append element (img/p/...) into div
 4. refer the properties to the content: 
 let albumNameP = document.createElement ("p");
-albumName.innertext = albumName[i].albumName
+
 insertBefore & appendChild + createTextNode */
