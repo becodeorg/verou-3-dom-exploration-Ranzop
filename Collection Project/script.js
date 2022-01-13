@@ -43,9 +43,10 @@ const collection = [{
         albumLabel: 'Don Giovanni Records',
         albumCountryOfOrigin: 'USA'
     }
-]
+] 
 
-/* Tried to create this with a for loop but didn't really work.  */
+/* Tried to create this with a for loop */
+
 for (i = 0; i < collection.length; i++) {
     const createDiv1 = document.createElement("div");
     document.body.appendChild(createDiv1);
@@ -65,9 +66,27 @@ for (i = 0; i < collection.length; i++) {
     createDiv1.append(Div, Div1, Div2, Div3, Div4, Div5, Div6);
     createDivContainer1.append(createDiv1);
 }
-for (i = 0; i < 1; i ++) {
-getSecondGenre = document.write (collection[0].genre[1]);
+
+// TODO: set a class for one container
+
+let test100 = document.createElement('div');
+document.body.appendChild(test100);
+test100.className = "hello";
+for (i = 0; i < 1; i++) {
+let x = document.createTextNode(collection[3].albumName);
+test100.appendChild(x);
+
 }
+
+// TODO: try to get something in there
+// TODO: get the correct info in there
+
+
+
+
+/* const test2 = document.collection[0].genre[0];
+console.log(test2); */
+
 
 // A similar method would be:
 
@@ -75,58 +94,9 @@ collection.forEach((album) => {
     console.log(album.genre);
 })
 
+const hello = document.getElementById("123");
+hello.classList.add = "test";
+
 // TODO: 1. function (grab collection) 2. for collection[i] 3.grab collection[1].albumName 4.insert as InnerHTML
 
-
-/*     collection.forEach((album) => {
-        document.body.appendChild(album.albumName)
-    }) */
-
-// trying to get my array items into the right spot.
-
-collection.forEach((album) => {
-const albumName1 = document.querySelector("albumName");
-console.log (albumName1);
-albumName1.albumName === album.albumName;
-console.log(albumName1.albumName);
-    })
-
-/* getLabel1.insertBefore(Div); */
-/* for (i = 0; i < collection.length; i ++) {
-console.log(collection[i].albumName);
-const albumName1 = collection[1].albumName;
-document.createAttribute()
-} */
-
-
-
-/* var h1 = document.getElementsByTagName("H1")[0];   // Get the first <h1> element in the document
-var att = document.createAttribute("class");       // Create a "class" attribute
-att.value = "democlass";                           // Set the value of the class attribute
-h1.setAttributeNode(att);                          // Add the class attribute to <h1> */
-// trying to get some response out of some elements
-
-/* var selectAlbumName = document.getElementsByClassName("div.albumName");
-for (i = 0; i < selectAlbumName.length; i++) {
-    selectAlbumName[i].style.backgroundColor = "red";
-    selectAlbumName[i].style.padding = "100px";
-} */
-
-/* let txt =" ";
-for (i in collection) {
-    txt += collection[i];
-}
-document.getElementsByClassName("albumName").innerHTML = txt; */
-/* After the creation of an element, we can either use the appendChild() method or insertBefore() method to insert the created element in the document. */
-
-
-
-
-
-/* 1. create const
-2. create containers
-3. append div into container div and then append element (img/p/...) into div
-4. refer the properties to the content: 
-let albumNameP = document.createElement ("p");
-
-insertBefore & appendChild + createTextNode */
+/* console.log(collection.albumName[0]); */
