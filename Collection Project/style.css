@@ -1,1 +1,16 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+}
+
+.container-1 {
+  background-color: rebeccapurple;
+  width: 100px;
+  height: 100px;
+  padding: 100px;
+}
+/*# sourceMappingURL=style.css.map */

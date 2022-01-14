@@ -231,7 +231,18 @@ for (let i = 0; i < 1; i++) {
 
 }
 
+/* for (let i = 0; i < container.length; i++) {
+let test = document.querySelectorAll("container")[i];
+console.log (test);
+test.className = "container-1";
+} */
 
+for(let item in "container") {
+    let numbersArray = ["1","2","3","4","5"]
+    let test = document.querySelectorAll("container")[item];
+console.log (test);
+test.className = "container-" + numbersArray[item];
+}
 
 
 // TODO: try to get something in there
