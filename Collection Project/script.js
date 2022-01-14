@@ -1,53 +1,8 @@
-const collection = [{
-        albumName: 'Fantastic Planet',
-        artistName: 'Lealani',
-        releaseYear: '2019',
-        genre: ['electronic', 'experimental electronic', 'experimental hip-hop', 'pop', 'synthpop', 'triphop', 'Los Angeles'],
-        albumArtwork: 'fantastic-planet.jpg',
-        albumLabel: 'Dome of Doom',
-        albumCountryOfOrigin: 'USA'
-    },
-    {
-        albumName: 'Slide',
-        artistName: 'George Clanton',
-        releaseYear: '2018',
-        genre: ['electronic', 'baggy', 'chillwave', 'hypnogogic pop', 'vaporwave', 'Los Angeles'],
-        albumArtwork: 'slide.jpg',
-        albumLabel: '100% Electronica',
-        albumCountryOfOrigin: 'USA'
-    },
-    {
-        albumName: 'Suddenly Everyone Explodes',
-        artistName: 'Plastic Mermaids',
-        releaseYear: '2019',
-        genre: ['dream pop', 'shoegaze', 'experimental', 'indie-rock'],
-        albumArtwork: 'suddenly-everyone-explodes.jpg',
-        albumLabel: 'Sunday Best Recordings',
-        albumCountryOfOrigin: 'UK'
-    },
-    {
-        albumName: 'Callisto',
-        artistName: 'Robotalco',
-        releaseYear: '2019',
-        genre: ['electronic', 'balearic', 'disco', 'dub', 'house', 'Italy'],
-        albumArtwork: 'callisto.jpg',
-        albumLabel: 'Silk Sound',
-        albumCountryOfOrigin: 'Italy'
-    },
-    {
-        albumName: 'Reckoning',
-        artistName: 'Mourning [A] BLKstar',
-        releaseYear: '2019',
-        genre: ['experimental', 'afrofuturism', 'beats', 'electronic music', 'soul', 'Cleveland'],
-        albumArtwork: 'reckoning.jpg',
-        albumLabel: 'Don Giovanni Records',
-        albumCountryOfOrigin: 'USA'
-    }
-] 
+import {collection} from "./collection.js";
 
 /* Tried to create this with a for loop */
 
-for (i = 0; i < collection.length; i++) {
+for (let i = 0; i < collection.length; i++) {
     const createDiv1 = document.createElement("div");
     document.body.appendChild(createDiv1);
 
@@ -79,20 +34,210 @@ for (i = 0; i < collection.length; i++) {
 let test100 = document.createElement('div');
 document.body.appendChild(test100);
 test100.className = "hello";
-for (i = 0; i < 1; i++) {
-let x = document.createTextNode(collection[3].albumName);
-test100.appendChild(x);
+for (let i = 0; i < 1; i++) {
+    let x = document.createTextNode(collection[3].albumName);
+    test100.appendChild(x);
 
 }
 
-for (i = 0; i < 1; i++) {
-    let x = document.createTextNode(collection[0].albumName);
-    let y = document.getElementsByTagName("div.albumName");
-    y.appendChild(x);
+for (let i = 0; i < 1; i++) {
+    let x1 = document.createTextNode(collection[0].albumName);
+    let y1 = document.querySelector(".albumName");
+    y1.appendChild(x1);
+
+
+    let x2 = document.createTextNode(collection[1].albumName);
+    let y2 = document.querySelectorAll(".albumName")[1];
+    y2.appendChild(x2);
+
+
+    let x3 = document.createTextNode(collection[2].albumName);
+    let y3 = document.querySelectorAll(".albumName")[2];
+    y3.appendChild(x3);
+
+
+    let x4 = document.createTextNode(collection[3].albumName);
+    let y4 = document.querySelectorAll(".albumName")[3];
+    y4.appendChild(x4);
+
+
+    let x5 = document.createTextNode(collection[4].albumName);
+    let y5 = document.querySelectorAll(".albumName")[4];
+    y5.appendChild(x5);
 }
+for (let i = 0; i < 1; i++) {
+    let x1 = document.createTextNode(collection[0].artistName);
+    let y1 = document.querySelector(".artistName");
+    y1.appendChild(x1);
+
+
+    let x2 = document.createTextNode(collection[1].artistName);
+    let y2 = document.querySelectorAll(".artistName")[1];
+    y2.appendChild(x2);
+
+
+    let x3 = document.createTextNode(collection[2].artistName);
+    let y3 = document.querySelectorAll(".artistName")[2];
+    y3.appendChild(x3);
+
+
+    let x4 = document.createTextNode(collection[3].artistName);
+    let y4 = document.querySelectorAll(".artistName")[3];
+    y4.appendChild(x4);
+
+
+    let x5 = document.createTextNode(collection[4].artistName);
+    let y5 = document.querySelectorAll(".artistName")[4];
+    y5.appendChild(x5);
+}
+
+for (let i = 0; i < 1; i++) {
+    let x1 = document.createTextNode(collection[0].releaseYear);
+    let y1 = document.querySelector(".releaseYear");
+    y1.appendChild(x1);
+
+
+    let x2 = document.createTextNode(collection[1].releaseYear);
+    let y2 = document.querySelectorAll(".releaseYear")[1];
+    y2.appendChild(x2);
+
+
+    let x3 = document.createTextNode(collection[2].releaseYear);
+    let y3 = document.querySelectorAll(".releaseYear")[2];
+    y3.appendChild(x3);
+
+
+    let x4 = document.createTextNode(collection[3].releaseYear);
+    let y4 = document.querySelectorAll(".releaseYear")[3];
+    y4.appendChild(x4);
+
+
+    let x5 = document.createTextNode(collection[4].releaseYear);
+    let y5 = document.querySelectorAll(".releaseYear")[4];
+    y5.appendChild(x5);
+}
+for (let i = 0; i < 1; i++) {
+    let x1 = document.createTextNode(collection[0].genre);
+    let y1 = document.querySelector(".genre");
+    y1.appendChild(x1);
+
+
+    let x2 = document.createTextNode(collection[1].genre);
+    let y2 = document.querySelectorAll(".genre")[1];
+    y2.appendChild(x2);
+
+
+    let x3 = document.createTextNode(collection[2].genre);
+    let y3 = document.querySelectorAll(".genre")[2];
+    y3.appendChild(x3);
+
+
+    let x4 = document.createTextNode(collection[3].genre);
+    let y4 = document.querySelectorAll(".genre")[3];
+    y4.appendChild(x4);
+
+
+    let x5 = document.createTextNode(collection[4].genre);
+    let y5 = document.querySelectorAll(".genre")[4];
+    y5.appendChild(x5);
+}
+for (let i = 0; i < 1; i++) {
+    let y1 = document.createElement("img");
+    y1.setAttribute ("src", collection[0].albumArtwork);
+    console.log (y1);
+    let x1 = document.querySelector(".albumArtwork");
+    console.log (x1);
+    x1.appendChild(y1);
+
+    let y2 = document.createElement("img");
+    y2.setAttribute ("src", collection[1].albumArtwork);
+    console.log (y2);
+    let x2 = document.querySelector(".albumArtwork");
+    console.log (x2);
+    x2.appendChild(y2);
+
+    let y3 = document.createElement("img");
+    y3.setAttribute ("src", collection[2].albumArtwork);
+    console.log (y3);
+    let x3 = document.querySelector(".albumArtwork");
+    console.log (x3);
+    x3.appendChild(y3);
+
+    let y4 = document.createElement("img");
+    y4.setAttribute ("src", collection[3].albumArtwork);
+    console.log (y4);
+    let x4 = document.querySelector(".albumArtwork");
+    console.log (x4);
+    x4.appendChild(y4);
+
+    let y5 = document.createElement("img");
+    y5.setAttribute ("src", collection[4].albumArtwork);
+    console.log (y5);
+    let x5 = document.querySelector(".albumArtwork");
+    console.log (x5);
+    x5.appendChild(y5);
+}
+
+for (let i = 0; i < 1; i++) {
+    let x1 = document.createTextNode(collection[0].albumLabel);
+    let y1 = document.querySelector(".albumLabel");
+    y1.appendChild(x1);
+
+
+    let x2 = document.createTextNode(collection[1].albumLabel);
+    let y2 = document.querySelectorAll(".albumLabel")[1];
+    y2.appendChild(x2);
+
+
+    let x3 = document.createTextNode(collection[2].albumLabel);
+    let y3 = document.querySelectorAll(".albumLabel")[2];
+    y3.appendChild(x3);
+
+
+    let x4 = document.createTextNode(collection[3].albumLabel);
+    let y4 = document.querySelectorAll(".albumLabel")[3];
+    y4.appendChild(x4);
+
+
+    let x5 = document.createTextNode(collection[4].albumLabel);
+    let y5 = document.querySelectorAll(".albumLabel")[4];
+    y5.appendChild(x5);
+
+}
+for (let i = 0; i < 1; i++) {
+    let x1 = document.createTextNode(collection[0].albumCountryOfOrigin);
+    let y1 = document.querySelector(".CountryOfOrigin");
+    y1.appendChild(x1);
+
+
+    let x2 = document.createTextNode(collection[1].albumCountryOfOrigin);
+    let y2 = document.querySelectorAll(".CountryOfOrigin")[1];
+    y2.appendChild(x2);
+
+
+    let x3 = document.createTextNode(collection[2].albumCountryOfOrigin);
+    let y3 = document.querySelectorAll(".CountryOfOrigin")[2];
+    y3.appendChild(x3);
+
+
+    let x4 = document.createTextNode(collection[3].albumCountryOfOrigin);
+    let y4 = document.querySelectorAll(".CountryOfOrigin")[3];
+    y4.appendChild(x4);
+
+
+    let x5 = document.createTextNode(collection[4].albumCountryOfOrigin);
+    let y5 = document.querySelectorAll(".CountryOfOrigin")[4];
+    y5.appendChild(x5);
+
+}
+
+
+
 
 // TODO: try to get something in there
 // TODO: get the correct info in there
+
+// TODO: style Nodes & get info in there.
 
 
 
