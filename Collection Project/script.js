@@ -257,7 +257,14 @@ let getFirstAlbumLabel = document.querySelector(".albumLabel");
 getFirstDiv.insertBefore(getFirstArtwork,getFirstAlbumLabel);
 
 
-// TODO: go to the second section, ask for the first div.
+let getSecondDiv = document.querySelectorAll("div")[8];
+console.log (getSecondDiv);
+let getSecondArtwork = document.queryselector(".albumArtwork")[1];
+console.log (getSecondArtwork);
+let getSecondAlbumLabel = document.querySelectorAll(".albumLabel-2");
+console.log (getSecondAlbumLabel);
+getSecondDiv.insertBefore(getSecondArtwork,getSecondAlbumLabel);
+
 
 
 /* let getSecondDiv = document.querySelectorAll("div");
