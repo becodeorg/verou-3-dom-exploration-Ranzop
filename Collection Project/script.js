@@ -55,12 +55,19 @@ for (i = 0; i < collection.length; i++) {
     document.body.appendChild(createDivContainer1);
 
     const Div = document.createElement("div.albumName");
+    Div.className = "albumName";
     const Div1 = document.createElement("div.artistName");
+    Div1.className = "artistName";
     const Div2 = document.createElement("div.releaseYear");
+    Div2.className = "releaseYear";
     const Div3 = document.createElement("div.genre");
+    Div3.className = "genre";
     const Div4 = document.createElement("div.albumArtwork");
+    Div4.className = "albumArtwork";
     const Div5 = document.createElement("div.albumLabel");
+    Div5.className = "albumLabel";
     const Div6 = document.createElement("div.albumCountryOfOrigin");
+    Div6.className = "CountryOfOrigin";
 
 
     createDiv1.append(Div, Div1, Div2, Div3, Div4, Div5, Div6);
@@ -76,6 +83,12 @@ for (i = 0; i < 1; i++) {
 let x = document.createTextNode(collection[3].albumName);
 test100.appendChild(x);
 
+}
+
+for (i = 0; i < 1; i++) {
+    let x = document.createTextNode(collection[0].albumName);
+    let y = document.getElementsByTagName("div.albumName");
+    y.appendChild(x);
 }
 
 // TODO: try to get something in there
