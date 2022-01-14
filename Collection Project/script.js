@@ -1,4 +1,4 @@
-import {collection} from "./collection.js";
+import {collection} from "./collection.js" 
 
 /* Tried to create this with a for loop */
 
@@ -6,22 +6,22 @@ for (let i = 0; i < collection.length; i++) {
     const createDiv1 = document.createElement("div");
     document.body.appendChild(createDiv1);
 
-    const createDivContainer1 = document.createElement("container");
+    const createDivContainer1 = document.createElement("section");
     document.body.appendChild(createDivContainer1);
 
-    const Div = document.createElement("div.albumName");
+    const Div = document.createElement("div");
     Div.className = "albumName";
-    const Div1 = document.createElement("div.artistName");
+    const Div1 = document.createElement("div");
     Div1.className = "artistName";
-    const Div2 = document.createElement("div.releaseYear");
+    const Div2 = document.createElement("div");
     Div2.className = "releaseYear";
-    const Div3 = document.createElement("div.genre");
+    const Div3 = document.createElement("div");
     Div3.className = "genre";
-    const Div4 = document.createElement("div.albumArtwork");
+    const Div4 = document.createElement("div");
     Div4.className = "albumArtwork";
-    const Div5 = document.createElement("div.albumLabel");
+    const Div5 = document.createElement("div");
     Div5.className = "albumLabel";
-    const Div6 = document.createElement("div.albumCountryOfOrigin");
+    const Div6 = document.createElement("div");
     Div6.className = "CountryOfOrigin";
 
 
@@ -231,18 +231,31 @@ for (let i = 0; i < 1; i++) {
 
 }
 
-/* for (let i = 0; i < container.length; i++) {
-let test = document.querySelectorAll("container")[i];
+/* for (let i = 0; i < 5; i++) {
+let test = document.querySelectorAll("section")[i];
 console.log (test);
-test.className = "container-1";
+test.className = "section - " + (i+1);
 } */
 
-for(let item in "container") {
-    let numbersArray = ["1","2","3","4","5"]
-    let test = document.querySelectorAll("container")[item];
+
+
+let  x = 1;
+let test = document.querySelectorAll ("section");
+for (let item of test) {
+    item.className = "section-" + (x++);
+} 
+
+
+/* let numbersArray = [1,2,3,4,5];
+let i = 0;
+
+for(let item of numbersArray) {
+    let test = document.querySelectorAll("section");
 console.log (test);
-test.className = "container-" + numbersArray[item];
-}
+test[i++].className = ("section-" + item);
+}  */
+
+
 
 
 // TODO: try to get something in there
@@ -259,9 +272,9 @@ console.log(test2); */
 
 // A similar method would be:
 
-collection.forEach((album) => {
+/* collection.forEach((album) => {
     console.log(album.genre);
-})
+}) */
 
 const hello = document.getElementById("123");
 hello.classList.add = "test";
