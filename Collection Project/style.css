@@ -8,6 +8,8 @@
 body {
   display: -ms-grid;
   display: grid;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: rosybrown 2px 2px 2px;
 }
 
 .section-1 {
@@ -17,28 +19,31 @@ body {
   padding: 100px;
 }
 
-/* .section-2 {
-    background-color: rgb(153, 51, 122);
-    width: 100vw;
-    height: 100vh;
-    padding: 100px;
+.section-2 {
+  background-color: #99337a;
+  width: 100vw;
+  height: 100vh;
+  padding: 100px;
 }
+
 .section-3 {
-    background-color: rgb(28, 12, 173);
-    width: 100vw;
-    height: 100vh;
-    padding: 100px;
+  background-color: #1c0cad;
+  width: 100vw;
+  height: 100vh;
+  padding: 100px;
 }
+
 .section-4 {
-    background-color: rgb(36, 150, 170);
-    width: 100vw;
-    height: 100vh;
-    padding: 100px;
+  background-color: #2496aa;
+  width: 100vw;
+  height: 100vh;
+  padding: 100px;
 }
+
 .section-5 {
-    background-color: rgb(11, 236, 112);
-    width: 100vw;
-    height: 100vh;
-    padding: 100px;
-} */
+  background-color: #0bec70;
+  width: 100vw;
+  height: 100vh;
+  padding: 100px;
+}
 /*# sourceMappingURL=style.css.map */

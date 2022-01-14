@@ -31,14 +31,13 @@ for (let i = 0; i < collection.length; i++) {
 
 // TODO: set a class for one container
 
-let test100 = document.createElement('div');
+/* let test100 = document.createElement('div');
 document.body.appendChild(test100);
 test100.className = "hello";
 for (let i = 0; i < 1; i++) {
     let x = document.createTextNode(collection[3].albumName);
     test100.appendChild(x);
-
-}
+} */
 
 for (let i = 0; i < 1; i++) {
     let x1 = document.createTextNode(collection[0].albumName);
@@ -152,28 +151,28 @@ for (let i = 0; i < 1; i++) {
     let y2 = document.createElement("img");
     y2.setAttribute ("src", collection[1].albumArtwork);
     console.log (y2);
-    let x2 = document.querySelector(".albumArtwork");
+    let x2 = document.querySelectorAll(".albumArtwork")[1];
     console.log (x2);
     x2.appendChild(y2);
 
     let y3 = document.createElement("img");
     y3.setAttribute ("src", collection[2].albumArtwork);
     console.log (y3);
-    let x3 = document.querySelector(".albumArtwork");
+    let x3 = document.querySelectorAll(".albumArtwork")[2];
     console.log (x3);
     x3.appendChild(y3);
 
     let y4 = document.createElement("img");
     y4.setAttribute ("src", collection[3].albumArtwork);
     console.log (y4);
-    let x4 = document.querySelector(".albumArtwork");
+    let x4 = document.querySelectorAll(".albumArtwork")[3];
     console.log (x4);
     x4.appendChild(y4);
 
     let y5 = document.createElement("img");
     y5.setAttribute ("src", collection[4].albumArtwork);
     console.log (y5);
-    let x5 = document.querySelector(".albumArtwork");
+    let x5 = document.querySelectorAll(".albumArtwork")[4];
     console.log (x5);
     x5.appendChild(y5);
 }
@@ -228,8 +227,9 @@ for (let i = 0; i < 1; i++) {
     let x5 = document.createTextNode(collection[4].albumCountryOfOrigin);
     let y5 = document.querySelectorAll(".CountryOfOrigin")[4];
     y5.appendChild(x5);
-
 }
+
+let changePositionDivs =  document.getElementsByClassName
 
 /* for (let i = 0; i < 5; i++) {
 let test = document.querySelectorAll("section")[i];
@@ -240,10 +240,35 @@ test.className = "section - " + (i+1);
 
 
 let  x = 1;
-let test = document.querySelectorAll ("section");
-for (let item of test) {
+let numberSections = document.querySelectorAll ("section");
+for (let item of numberSections) {
     item.className = "section-" + (x++);
 } 
+
+let t = 1;
+let numberAlbumLabel = document.querySelectorAll (".albumLabel");
+for (let item of numberAlbumLabel) {
+    item.className = "albumLabel-" + (t++);
+}
+
+let getFirstDiv = document.querySelector("div");
+let getFirstArtwork = document.querySelector(".albumArtwork");
+let getFirstAlbumLabel = document.querySelector(".albumLabel");
+getFirstDiv.insertBefore(getFirstArtwork,getFirstAlbumLabel);
+
+
+// TODO: go to the second section, ask for the first div.
+
+
+/* let getSecondDiv = document.querySelectorAll("div");
+let getFirstArtwork = document.querySelector(".albumArtwork");
+let getFirstAlbumLabel = document.querySelector(".albumLabel");
+getSecondDiv.insertBefore(getFirstArtwork,getFirstAlbumLabel); */
+
+
+/* let getSecondDiv = document.querySelector("div")[1];
+let getThirdDiv = document.querySelector("div")[2];
+let getFourthDiv = document.querySelector("div")[3]; */
 
 
 /* let numbersArray = [1,2,3,4,5];
@@ -276,8 +301,8 @@ console.log(test2); */
     console.log(album.genre);
 }) */
 
-const hello = document.getElementById("123");
-hello.classList.add = "test";
+/* const hello = document.getElementById("123");
+hello.classList.add = "test"; */
 
 // TODO: 1. function (grab collection) 2. for collection[i] 3.grab collection[1].albumName 4.insert as InnerHTML
 
