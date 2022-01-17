@@ -259,12 +259,25 @@ getFirstDiv.insertBefore(getFirstArtwork,getFirstAlbumLabel);
 
 let getSecondDiv = document.querySelectorAll("div")[8];
 console.log (getSecondDiv);
-let getSecondArtwork = document.queryselector(".albumArtwork")[1];
-console.log (getSecondArtwork);
-let getSecondAlbumLabel = document.querySelectorAll(".albumLabel-2");
-console.log (getSecondAlbumLabel);
-getSecondDiv.insertBefore(getSecondArtwork,getSecondAlbumLabel);
+let getFirstSection = document.querySelector("section");
+console.log (getFirstSection);
+let getSecondSection = getFirstSection.nextElementSibling;
+console.log (getSecondSection);
+let getSecondSectionChildren = getSecondSection.childNodes;
+console.log (getSecondSectionChildren);
+let getSecondSectionChildrensChildren = getSecondSectionChildren.children;
+console.log (getSecondSectionChildrensChildren);
 
+
+
+function GFG_Fun() {
+    parent = document.getElementById('parent');
+    children = parent.querySelectorAll('.child');
+    down.innerHTML = "Text of child node is - '" 
+        + children[0].innerHTML 
+        + "' and '" 
+        + children[1].innerHTML 
+        + "'";
 
 
 /* let getSecondDiv = document.querySelectorAll("div");
