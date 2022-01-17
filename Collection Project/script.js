@@ -263,22 +263,42 @@ let getFirstSection = document.querySelector("section");
 console.log (getFirstSection);
 let getSecondSection = getFirstSection.nextElementSibling;
 console.log (getSecondSection);
+
+/* This code does not work because it is located on another level, we are at the section level
+and thus require */
+
 let getSecondSectionChildren = getSecondSection.childNodes;
 console.log (getSecondSectionChildren);
-let getSecondSectionChildrensChildren = getSecondSectionChildren.children;
-console.log (getSecondSectionChildrensChildren);
+
+// Whenever you take children's children -> you get an array with a div in, but technically it is completely different;
+// so we need to indicate the INDEX as well here!!!
+let getSecondSectionChildrensAlbumLabel = getSecondSectionChildren[0].children[5];
+console.log (getSecondSectionChildrensAlbumLabel);
+let getSecondSectionChildrensAlbumArtwork = getSecondSectionChildren[0].children[4];
+console.log (getSecondSectionChildrensAlbumArtwork);
+
+getSecondDiv.insertBefore(getSecondSectionChildrensAlbumLabel, getSecondSectionChildrensAlbumArtwork);
+
+let getSecondSectionChildrensCountrOfOrigin = getSecondSectionChildren[0].children[6];
+console.log (getSecondSectionChildrensCountrOfOrigin);
+
+getSecondDiv.insertBefore(getSecondSectionChildrensCountrOfOrigin, getSecondSectionChildrensAlbumArtwork);
+
+/* let getSecondAlbumLabel = getSecondDiv.children[5];
+console.log (getSecondAlbumLabel); */
 
 
 
-function GFG_Fun() {
-    parent = document.getElementById('parent');
+
+/* getChild = () => {
+    let parent = document.getElementById('parent');
     children = parent.querySelectorAll('.child');
     down.innerHTML = "Text of child node is - '" 
         + children[0].innerHTML 
         + "' and '" 
         + children[1].innerHTML 
         + "'";
-
+ */
 
 /* let getSecondDiv = document.querySelectorAll("div");
 let getFirstArtwork = document.querySelector(".albumArtwork");
