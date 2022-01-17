@@ -8,20 +8,90 @@
 // Create a new <div> with a class .displayedsquare and the corresponding clicked color in the div above (.displayedsquare-wrapper)
 // Create a new <li> in the log below to state when the action was done
 
+
+
 let selectButtons = document.querySelectorAll(".actionsquare");
 console.log(selectButtons);
 
+let selectActionSquareWrapper = document.querySelector(".displayedsquare-wrapper");
+console.log(selectActionSquareWrapper);
+
+let selectActionLog = document.querySelector("h2");
+console.log(selectActionLog);
+
 // print out the word hi, on event.
-selectButtons.forEach(button => {
-    button.addEventListener('click', () => {
+for (let i = 0; i < 1 ; i++) {
+    selectButtons[0].addEventListener('click', () => {
         let createDiv = document.createElement('div');
-        createDiv.class = "displayedsquare";
-        createDiv.style.width = "200px";
-        createDiv.style.height = "200px";
-        createDiv.style.backgroundColor = "red";
-        document.body.append(createDiv);
+        createDiv.className = "displayedsquare";
+        createDiv.style.backgroundColor = "lime";
+        selectActionSquareWrapper.append(createDiv);
+    })
+}
+
+
+for (let i = 0; i < 1 ; i++) {
+    selectButtons[1].addEventListener('click', () => {
+        let createDiv = document.createElement('div');
+        createDiv.className = "displayedsquare";
+        createDiv.style.backgroundColor = "magenta";
+        selectActionSquareWrapper.append(createDiv);
+    })
+}
+
+for (let i = 0; i < 1 ; i++) {
+    selectButtons[2].addEventListener('click', () => {
+        let createDiv = document.createElement('div');
+        createDiv.className = "displayedsquare";
+        createDiv.style.backgroundColor = "orange";
+        selectActionSquareWrapper.append(createDiv);
+    })
+}
+
+
+
+selectButtons.forEach(button => {
+    button.addEventListener('click', (clickOnSquare) => {
+        let createList = document.createElement ("li");
+        selectActionLog.append(createList);
+
     })
 })
+
+const _initTime = Date.now()
+
+function getElapsedTime() {
+    return Number((Date.now() - _initTime) / 1000).toFixed(2) + 's'
+}
+
+function clickOnSquare(e) {
+    console.log(e.target.classList[1])
+    console.log(getElapsedTime())
+}
+
+const actionsquares = document.querySelectorAll('.actionsquare')
+for (let actionsquare of actionsquares) {
+    actionsquare.addEventListener('click', clickOnSquare)
+}
+
+
+// This does the exact same but different syntax
+
+
+
+
+
+/// this code does the same as a forEach loop.
+
+let createDiv = document.createElement('div');
+
+/* function copyProperties() {
+    let takeProperties = Object.assign(createDiv, selectButtons[0])
+} */
+
+let selectButtonz = document.querySelector('.actionsquare');
+console.log(selectButtonz);
+
 
 /* selectButtons.addEventListener("click", e => {
     if (e.target.matches(".actionsquare")) {
@@ -60,16 +130,16 @@ function addEventListener (click, selectButtons, callback) {
     document.addEventListener("click", e => {
         if (e.target.matches(selector)) callback(e)
     })
-} */
+}
 
 // let's combine our blocks of code
 
-/* document.addEventListener("click", e => {
+document.addEventListener("click", e => {
     if (e.target.matches("selectButtons")) {
         console.log("hi")
     }
 })
- */
+
 
 
 /* selectButtons.forEach(actionsquare => {
@@ -110,18 +180,3 @@ selectButtons.addEventListener(
     createNewDiv ()
 ) */
 
-const _initTime = Date.now()
-
-function getElapsedTime() {
-    return Number((Date.now() - _initTime) / 1000).toFixed(2) + 's'
-}
-
-function clickOnSquare(e) {
-    console.log(e.target.classList[1])
-    console.log(getElapsedTime())
-}
-
-const actionsquares = document.querySelectorAll('.actionsquare')
-for (let actionsquare of actionsquares) {
-    actionsquare.addEventListener('click', clickOnSquare)
-}
