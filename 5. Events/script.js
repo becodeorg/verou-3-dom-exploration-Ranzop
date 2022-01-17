@@ -8,17 +8,28 @@
 // Create a new <div> with a class .displayedsquare and the corresponding clicked color in the div above (.displayedsquare-wrapper)
 // Create a new <li> in the log below to state when the action was done
 
-let selectButtons = document.querySelector(".actionsquare");
+let selectButtons = document.querySelectorAll(".actionsquare");
 console.log(selectButtons);
 
 // print out the word hi, on event.
-selectButtons.addEventListener("click", e => {
+selectButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        let createDiv = document.createElement('div');
+        createDiv.class = "displayedsquare";
+        createDiv.style.width = "200px";
+        createDiv.style.height = "200px";
+        createDiv.style.backgroundColor = "red";
+        document.body.append(createDiv);
+    })
+})
+
+/* selectButtons.addEventListener("click", e => {
     if (e.target.matches(".actionsquare")) {
     console.log("hi")
     }
-})
+}) */
 
-// print out what information the eventlistener gets on click
+/* // print out what information the eventlistener gets on click
 selectButtons.addEventListener("click", e => {
     console.log(e)
 })
@@ -49,7 +60,7 @@ function addEventListener (click, selectButtons, callback) {
     document.addEventListener("click", e => {
         if (e.target.matches(selector)) callback(e)
     })
-}
+} */
 
 // let's combine our blocks of code
 
