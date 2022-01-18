@@ -20,7 +20,7 @@ let selectActionLog = document.querySelector("h2");
 console.log(selectActionLog);
 
 // print out the word hi, on event.
-for (let i = 0; i < 1 ; i++) {
+for (let i = 0; i < 1; i++) {
     selectButtons[0].addEventListener('click', () => {
         let createDiv = document.createElement('div');
         createDiv.className = "displayedsquare";
@@ -30,7 +30,7 @@ for (let i = 0; i < 1 ; i++) {
 }
 
 
-for (let i = 0; i < 1 ; i++) {
+for (let i = 0; i < 1; i++) {
     selectButtons[1].addEventListener('click', () => {
         let createDiv = document.createElement('div');
         createDiv.className = "displayedsquare";
@@ -39,7 +39,7 @@ for (let i = 0; i < 1 ; i++) {
     })
 }
 
-for (let i = 0; i < 1 ; i++) {
+for (let i = 0; i < 1; i++) {
     selectButtons[2].addEventListener('click', () => {
         let createDiv = document.createElement('div');
         createDiv.className = "displayedsquare";
@@ -48,23 +48,48 @@ for (let i = 0; i < 1 ; i++) {
     })
 }
 
+/* const actionsquares = document.querySelectorAll('.actionsquare')
+for (let actionsquare of actionsquares) {
+    actionsquare.addEventListener('click', clickOnSquare)
+    
+} 
+
+for (let actionsquare of actionsquares) {
+    actionsquare.addEventListener('click', getClass)
+} 
+
 function clickOnSquare(e) {
     console.log(e.target.classList[1])
     console.log(getElapsedTime())
 }
+ */
+
+// (e) in deze functie slaat op de addEventListener in dezelfde functie,
+// en wordt dus niet afgeroepen door een voorgaande functie.
+
 
 
 selectButtons.forEach(button => {
-    button.addEventListener('click', (clickOnSquare) => {
-        let createList = document.createElement ("li");
-        createList.textContent = getElapsedTime();
-        selectActionLog.append(createList);
+    button.addEventListener('click', (e) => {
+        let createListItem = document.createElement("li");
+        createListItem.textContent = getElapsedTime() + " " + "You just click the" + " " + e.target.classList[1];
+        selectActionLog.append(createListItem);
     })
 })
 
+// TODO: Add an event listener on the document <body>,
+// TODO:  listening for the keypress event: spacebar
+// TODO: randomly change the background color of the whole page
+// TODO: Log when the spacebar is used the same way you used for the generated squares.
+// TODO: When the l key is pressed the log gets deleted (erases the generated <li>s)
+// TODO: When the s key is pressed the squares get deleted (erases the generated squares)
+
 // TODO: get elapsed time + string "created a new +class"
 
-console.log (getElapsedTime);
+var x = document.getElementById('clickB');
+var counter = 1;
+
+console.log(getElapsedTime);
 
 // TODO: get this info into the correct node
 // TODO: display the node.
@@ -77,10 +102,7 @@ function getElapsedTime() {
 
 
 
-const actionsquares = document.querySelectorAll('.actionsquare')
-for (let actionsquare of actionsquares) {
-    actionsquare.addEventListener('click', clickOnSquare)
-} 
+
 
 let createDiv = document.createElement('div');
 
@@ -224,5 +246,3 @@ for (let actionsquare of actionsquares) {
     actionsquare.addEventListener('click', clickOnSquare)
 }
  */
-
-
