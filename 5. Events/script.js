@@ -90,21 +90,13 @@ selectBody.addEventListener('keydown', generateRandomColor);
 function generateRandomColor(e) {
     if (e.which === 32) {
     selectBody.style.backgroundColor = "#" + (Math.floor(Math.random() * 16777215).toString(16));
+    console.log (getElapsedTime());
+    let createListItem2 = document.createElement("li");
+        createListItem2.textContent = getElapsedTime() + " " + "It took you this long to figure out where the space-bar is? Preposterous,you puny imbecil!";
+        selectActionLog.append(createListItem2);
 }}
 
 
-
-
-// TODO:  listening for the keypress event: spacebar
-// arguments: welk event, dan welke functie
-
-
-// TODO: randomly change the background color of the whole page
-
-
-
-
-// TODO: Log when the spacebar is used the same way you used for the generated squares.
 // TODO: When the l key is pressed the log gets deleted (erases the generated <li>s)
 // TODO: When the s key is pressed the squares get deleted (erases the generated squares)
 
