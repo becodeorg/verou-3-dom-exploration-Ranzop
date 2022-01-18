@@ -48,15 +48,26 @@ for (let i = 0; i < 1 ; i++) {
     })
 }
 
+function clickOnSquare(e) {
+    console.log(e.target.classList[1])
+    console.log(getElapsedTime())
+}
 
 
 selectButtons.forEach(button => {
     button.addEventListener('click', (clickOnSquare) => {
         let createList = document.createElement ("li");
+        createList.textContent = getElapsedTime();
         selectActionLog.append(createList);
-
     })
 })
+
+// TODO: get elapsed time + string "created a new +class"
+
+console.log (getElapsedTime);
+
+// TODO: get this info into the correct node
+// TODO: display the node.
 
 const _initTime = Date.now()
 
@@ -64,16 +75,17 @@ function getElapsedTime() {
     return Number((Date.now() - _initTime) / 1000).toFixed(2) + 's'
 }
 
-function clickOnSquare(e) {
-    console.log(e.target.classList[1])
-    console.log(getElapsedTime())
-}
+
 
 const actionsquares = document.querySelectorAll('.actionsquare')
 for (let actionsquare of actionsquares) {
     actionsquare.addEventListener('click', clickOnSquare)
-}
+} 
 
+let createDiv = document.createElement('div');
+
+let selectButtonz = document.querySelector('.actionsquare');
+console.log(selectButtonz);
 
 // This does the exact same but different syntax
 
@@ -83,14 +95,12 @@ for (let actionsquare of actionsquares) {
 
 /// this code does the same as a forEach loop.
 
-let createDiv = document.createElement('div');
 
 /* function copyProperties() {
     let takeProperties = Object.assign(createDiv, selectButtons[0])
 } */
 
-let selectButtonz = document.querySelector('.actionsquare');
-console.log(selectButtonz);
+
 
 
 /* selectButtons.addEventListener("click", e => {
@@ -179,4 +189,40 @@ selectButtons.addEventListener(
     'click',
     createNewDiv ()
 ) */
+
+//exemplary code from Bert ( does not work here)
+// (Q: object:assign)
+/* 
+const _initTime = Date.now()
+
+function getElapsedTime() {
+    return Number((Date.now() - _initTime) / 1000).toFixed(2) + 's'
+}
+
+function clickOnSquare(e) {
+    console.log(e.target.classList[1]);
+    console.log(getElapsedTime());
+}
+
+// TODO: get new div
+const containerSection = document.querySelector(".displayedsquare-wrapper");
+console.log(containerSection);
+const div = document.createElement("div");
+div.classList.add("displayedsquare");
+containerSection.append(div);
+/* containerSection[0].addEventListener('click', clickonSquare); */
+/* 
+// TODO: get color
+const color = e.target.classList[1];
+
+// TODO: apply color
+
+div.classList.add(color);
+
+const actionsquares = document.querySelectorAll('.actionsquare')
+for (let actionsquare of actionsquares) {
+    actionsquare.addEventListener('click', clickOnSquare)
+}
+ */
+
 
