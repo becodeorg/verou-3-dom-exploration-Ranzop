@@ -67,26 +67,50 @@ function clickOnSquare(e) {
 // (e) in deze functie slaat op de addEventListener in dezelfde functie,
 // en wordt dus niet afgeroepen door een voorgaande functie.
 
+const _initTime = Date.now()
 
+function getElapsedTime() {
+    return Number((Date.now() - _initTime) / 1000).toFixed(2) + 's'
+}
 
 selectButtons.forEach(button => {
     button.addEventListener('click', (e) => {
         let createListItem = document.createElement("li");
-        createListItem.textContent = getElapsedTime() + " " + "You just click the" + " " + e.target.classList[1];
+        createListItem.textContent = getElapsedTime() + " " + "Did you just ATTACK the" + " " + e.target.classList[1] + " SQUARE??!!";
         selectActionLog.append(createListItem);
     })
 })
 
 // TODO: Add an event listener on the document <body>,
+
+let selectBody = document.querySelector ("body");
+console.log (selectBody);
+selectBody.addEventListener('keydown', generateRandomColor);
+
+function generateRandomColor(e) {
+    if (e.which === 32) {
+    selectBody.style.backgroundColor = "#" + (Math.floor(Math.random() * 16777215).toString(16));
+}}
+
+
+
+
 // TODO:  listening for the keypress event: spacebar
+// arguments: welk event, dan welke functie
+
+
 // TODO: randomly change the background color of the whole page
+
+
+
+
 // TODO: Log when the spacebar is used the same way you used for the generated squares.
 // TODO: When the l key is pressed the log gets deleted (erases the generated <li>s)
 // TODO: When the s key is pressed the squares get deleted (erases the generated squares)
 
 // TODO: get elapsed time + string "created a new +class"
 
-var x = document.getElementById('clickB');
+/* var x = document.getElementById('clickB');
 var counter = 1;
 
 console.log(getElapsedTime);
@@ -94,11 +118,7 @@ console.log(getElapsedTime);
 // TODO: get this info into the correct node
 // TODO: display the node.
 
-const _initTime = Date.now()
 
-function getElapsedTime() {
-    return Number((Date.now() - _initTime) / 1000).toFixed(2) + 's'
-}
 
 
 
@@ -107,7 +127,7 @@ function getElapsedTime() {
 let createDiv = document.createElement('div');
 
 let selectButtonz = document.querySelector('.actionsquare');
-console.log(selectButtonz);
+console.log(selectButtonz); */
 
 // This does the exact same but different syntax
 
