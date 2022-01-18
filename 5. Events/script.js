@@ -9,7 +9,7 @@
 // Create a new <li> in the log below to state when the action was done
 
 
-
+/* 
 let selectButtons = document.querySelectorAll(".actionsquare");
 console.log(selectButtons);
 
@@ -48,21 +48,7 @@ for (let i = 0; i < 1; i++) {
     })
 }
 
-/* const actionsquares = document.querySelectorAll('.actionsquare')
-for (let actionsquare of actionsquares) {
-    actionsquare.addEventListener('click', clickOnSquare)
-    
-} 
 
-for (let actionsquare of actionsquares) {
-    actionsquare.addEventListener('click', getClass)
-} 
-
-function clickOnSquare(e) {
-    console.log(e.target.classList[1])
-    console.log(getElapsedTime())
-}
- */
 
 // (e) in deze functie slaat op de addEventListener in dezelfde functie,
 // en wordt dus niet afgeroepen door een voorgaande functie.
@@ -83,21 +69,32 @@ selectButtons.forEach(button => {
 
 // TODO: Add an event listener on the document <body>,
 
-let selectBody = document.querySelector ("body");
-console.log (selectBody);
+let selectBody = document.querySelector("body");
+console.log(selectBody);
 selectBody.addEventListener('keydown', generateRandomColor);
 
 function generateRandomColor(e) {
     if (e.which === 32) {
-    selectBody.style.backgroundColor = "#" + (Math.floor(Math.random() * 16777215).toString(16));
-    console.log (getElapsedTime());
-    let createListItem2 = document.createElement("li");
+        selectBody.style.backgroundColor = "#" + (Math.floor(Math.random() * 16777215).toString(16));
+        console.log(getElapsedTime());
+        let createListItem2 = document.createElement("li");
         createListItem2.textContent = getElapsedTime() + " " + "It took you this long to figure out where the space-bar is? Preposterous,you puny imbecil!";
         selectActionLog.append(createListItem2);
-}}
+    }
+}
 
 
 // TODO: When the l key is pressed the log gets deleted (erases the generated <li>s)
+let selectListItem = document.querySelectorAll("li");
+console.log(selectListItem);
+selectBody.addEventListener('keydown', pressLToDeleteList);
+
+function pressLToDeleteList(e) {
+    if (e.which === 76) {
+        console.log("hi mofo")
+        selectListItem.forEach.innerHTML = "";
+    }
+} */
 // TODO: When the s key is pressed the squares get deleted (erases the generated squares)
 
 // TODO: get elapsed time + string "created a new +class"
@@ -258,3 +255,44 @@ for (let actionsquare of actionsquares) {
     actionsquare.addEventListener('click', clickOnSquare)
 }
  */
+
+// exemplary code by Basile:
+
+
+
+
+
+const _initTime = Date.now()
+
+function getElapsedTime() {
+    return Number((Date.now() - _initTime) / 1000).toFixed(2) + 's'
+}
+
+const createNewSquare = (color) => {
+    const newSquare = document.createElement("div");
+    newSquare.classList.add('displayedsquare', color);
+    getDisplayedWrapper.appendChild(newSquare);
+}
+
+const createLog = () =>{
+    
+}
+
+function clickOnSquare(e) {
+    const color = e.target.classList[1];
+    const timeStamp = getElapsedTime();
+    console.log(e.target.classList[1])
+    console.log(getElapsedTime())
+    const getDisplayedWrapper = document.querySelector(".displayedsquare-wrapper");
+    createNewSquare(color);
+    createLog(timeStamp);
+}
+// watch out; className overwrites all preceding class assignments
+// new function syntax:  const createNewFunction = () => {}
+// the advantage is that you can read it better: const has some values and will use it inside the function.
+
+const actionsquares = document.querySelectorAll('.actionsquare')
+for (let actionsquare of actionsquares) {
+    actionsquare.addEventListener('click', clickOnSquare)
+
+}
